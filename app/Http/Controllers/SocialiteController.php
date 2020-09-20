@@ -44,6 +44,6 @@ class SocialiteController extends Controller
             $user_l_data = User::where('email', $user->email)->first();
         }
         Auth::login($user_l_data, true);
-        return view('home');
+        return redirect()->route('home');
     }
 }
